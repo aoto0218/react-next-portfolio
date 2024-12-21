@@ -1,4 +1,4 @@
-import styles from "@/app/_components/Header/index.module.css";
+import styles from "./index.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,8 +7,8 @@ export default function Header(){
         <header className={styles.header}>
             <Link href="/">
                 <Image
-                    src="/logo.svg"
-                    width={100}
+                    src="/logo.png"
+                    width={50}
                     height={50}
                     alt="logo"
                     className={styles.logo}
