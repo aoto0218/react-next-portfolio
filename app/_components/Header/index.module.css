@@ -6,14 +6,10 @@
     background-color: rgb(39, 39, 39);
 }
 
-.logo {
-    margin-left: 20px;
-}
-
 .name {
     font-size: 18px;
     font-weight: bold;
-    margin: 10px 0 0 20px;
+    margin-top:10px
 }
 
 .nav {
@@ -22,13 +18,18 @@
     list-style: none;
     font-size: 20px;
     text-align: center;
+    padding-inline-start:0;
+}
+
+.nav_item {
+    width:150px;
 }
 
 .nav_link {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition:color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .nav_link:hover {

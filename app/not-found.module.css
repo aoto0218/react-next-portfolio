@@ -1,19 +1,19 @@
-.title{
-    font-size:2rem;
-    text-align:center;
-    font-weight:bold;
-    font-family:"system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif";
-    margin-bottom:24px;
+.title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: "system-ui," Segoe UI",Roboto,Helvetica,Arial,sans-serif";
+    margin-bottom: 24px;
 }
 
-.text{
-    font-size:1rem;
-    text-align:center;
+.text {
+    font-size: 1rem;
+    text-align: center;
 }
 
-.container{
-    background-color:black;
-    color:white;
-    margin:0 auto 0;
-    padding:160px 80px;
+.container {
+    background-color: black;
+    color: white;
+    margin: 0 auto 0;
+    padding: 56px 80px;
 }

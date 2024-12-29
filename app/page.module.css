@@ -1,22 +1,90 @@
-.main{
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.s_title{
-    margin-top:200px;
-    margin-bottom:100px;
-    text-align:center;
+.content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    animation:fade-in-up 1s ease-out;
 }
 
-.s_title_h1{
-    font-size:50px;
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content_feeld {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -80px;
+    padding-top: 30px;
+    width: 500px;
+    height: 400px;
+    border-radius: 15px;
+    background-color: rgb(32, 32, 32);
+    animation: gradient-loop 5s infinite;
+    text-align: center;
+}
+
+@keyframes gradient-loop {
+    0% {
+        box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.5);
+    }
+
+    50% {
+        box-shadow: 0px 1px 10px rgba(155, 155, 155, 0.5);
+    }
+
+    100% {
+        box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.content_link {
+    margin-top: auto;
+    margin-bottom:20px;
+    color: white;
+    background-color: black;
+    width:150px;
+    padding:15px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition:background-color 0.3s;
+}
+
+.content_link:hover {
+    background-color: #111111;
+}
+
+.h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.s_title {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.s_title_h1 {
+    font-size: 50px;
     font-family: Georgia, serif;
 }
 
-.s_title_h2{
-    font-size:20px;
+.s_title_h2 {
+    font-size: 20px;
     font-family: Georgia, serif;
 }
 
@@ -37,7 +105,7 @@
     font-size: 32px;
     background: #707070;
     box-sizing: border-box;
-    border-radius: 30px;
+    border-radius: 35px;
 }
 
 .balloon_left:before {
@@ -71,7 +139,7 @@
     color: black;
     font-size: 32px;
     background: #00ff00;
-    border-radius:30px;
+    border-radius: 35px;
 }
 
 .balloon_right:before {
@@ -84,6 +152,6 @@
     border-left: 15px solid #00ff00;
 }
 
-.shiga{
-    margin-top:30px;
+.shiga {
+    margin-top: 30px;
 }

@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-inline-start: 0;
+}
+
+.content {
+    background-color:white;
+    color: black;
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    list-style: none;
+}
