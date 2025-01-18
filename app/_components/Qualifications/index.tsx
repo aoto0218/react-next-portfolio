@@ -1,5 +1,3 @@
-import { getQualificationsList} from "@/app/_libs/microcms";
-import { QUALIFICATIONS_LIST_LIMIT } from "@/app/_constants";
 import Image from "next/image";
 import styles from "./index.module.css";
 
@@ -11,7 +9,7 @@ type Qualification = {
         width: number;
         height: number;
     };
-    detail: string;
+    detail?: string;
     date: string;
 };
 

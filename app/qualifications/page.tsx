@@ -9,7 +9,7 @@ export default async function qualifications() {
     return (
         
         <>
-            <p className={styles.title}>取得資格</p>
+            <p className={styles.title}>資格</p>
             <Qualifications
                 data={data.contents.map(item => ({
                     ...item,

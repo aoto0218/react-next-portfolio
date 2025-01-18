@@ -4,8 +4,7 @@
 }
 
 .list{
-    background-color:white;
-    color: black;
+    background-color: rgb(32, 32, 32);
     padding: 50px;
     border-radius: 15px;
     list-style: none;
