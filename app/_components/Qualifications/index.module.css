@@ -3,29 +3,33 @@
     margin:0 auto;
 }
 
+.item{
+    list-style: none;
+}
+
 .list{
     background-color: rgb(32, 32, 32);
-    padding: 50px;
+    padding: 30px;
     border-radius: 15px;
-    list-style: none;
     margin-top:15px;
-}
-
-.name{
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom:30px;
-}
-
-.detail{
-    margin-top: 50px;
-}
-
-.date{
-    text-align: right;
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+    color:white;
 }
 
 .thumbnail{
+    width:192px;
+    height:108px;
     border-radius: 15px;
-    margin:0 auto;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left:30px;
+}
+
+.date{
+    margin-left:auto;
 }

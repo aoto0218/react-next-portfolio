@@ -53,3 +53,20 @@ export const getDeliverablesList = async (queries?: MicroCMSQueries) => {
         });
     return listData;
 };
+
+export const getQualificationsDetail = async (
+    contentId: string,
+    queries?: MicroCMSQueries
+    ) => {
+    const detailData = await client.getListDetail<QualificationsData>({
+        endpoint: 'qualifications',
+        contentId,
+        queries,
+        customRequestInit:{
+            next:{
+                revalidate:queries?.draftKey===undefined?60:0,
+            },
+        },
+    });
+    return detailData;
+};

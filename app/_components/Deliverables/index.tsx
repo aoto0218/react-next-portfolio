@@ -34,26 +34,17 @@ export default function Deliverables({
                 <p className={styles.empty}>まだ作成した成果物はありません。</p>
             ):(
                 <ul>
-                    {data.map((daliverables)=>(
-                        <li key={daliverables.id} className={styles.list}>
-                            <p className={styles.name}>{daliverables.name}</p>
+                    {data.map((deliverables)=>(
+                        <li key={deliverables.id} className={styles.list}>
                             <Image
-                                src={daliverables.thumbnail?.url || "/no-image.png"}
-                                alt={daliverables.name}
-                                width={daliverables.thumbnail?.width || 640}
-                                height={daliverables.thumbnail?.height || 360}
+                                src={deliverables.thumbnail?.url || "/no-image.png"}
+                                alt={deliverables.name}
+                                width={deliverables.thumbnail?.width || 1920}
+                                height={deliverables.thumbnail?.height || 1080}
                                 className={styles.thumbnail}
                             />
-                            <p className={styles.detail}>{daliverables.detail}</p>
-                            <Image
-                                src={daliverables.image?.url || "/no-image.png"}
-                                alt={daliverables.name}
-                                width={daliverables.image?.width || 640}
-                                height={daliverables.image?.height || 360}
-                                className={styles.image}
-                            />
-                            <p className={styles.date}>{daliverables.date}</p>
-                            {/* <Link href={daliverables.file} className={styles.file}>実際の成果物はこちら</Link> */}
+                            <p className={styles.name}>{deliverables.name}</p>
+                            <p className={styles.date}>{deliverables.date}</p>
                         </li>
                     ))}
                 </ul>
