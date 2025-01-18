@@ -22,7 +22,7 @@ export default function Qualifications({
 }:{
     data: QualificationsProps;
 }){
-  
+
     return(
         <div className={styles.container}>
             {data.length===0?(
@@ -33,10 +33,11 @@ export default function Qualifications({
                         <li key={qualifications.id} className={styles.list}>
                             <p className={styles.name}>{qualifications.name}</p>
                             <Image
-                                src={qualifications.thumbnail?.url || "/path/to/default-image.jpg"}
+                                src={qualifications.thumbnail?.url || "/no-image.png"}
                                 alt={qualifications.name}
-                                width={qualifications.thumbnail?.width || 200}
-                                height={qualifications.thumbnail?.height || 200}
+                                width={qualifications.thumbnail?.width || 640}
+                                height={qualifications.thumbnail?.height || 360}
+                                className={styles.thumbnail}
                             />
                             <p className={styles.detail}>{qualifications.detail}</p>
                             <p className={styles.date}>{qualifications.date}</p>
