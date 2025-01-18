@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Qualifications from "./_components/Qualifications";
-import Deliverables from "./_components/Deliverables";
+import QualificationsTop from "./_components/QualificationsTop";
+import DeliverablesTop from "./_components/DeliverablesTop";
 import AgeCalculator from "./_components/AgeCalculator";
 import Link from "next/link";
 
@@ -11,12 +11,12 @@ export default function Home() {
             <div className={styles.content}>
                 <div className={styles.content_feeld}>
                     <h2 className={styles.h2}>最近取得した資格</h2>
-                    <Qualifications />
+                    <QualificationsTop />
                     <Link href="/qualifications" className={styles.content_link}>詳しく見る</Link>
                 </div>
                 <div className={styles.content_feeld}>
                     <h2 className={styles.h2}>最近の成果物</h2>
-                    <Deliverables />
+                    <DeliverablesTop />
                     <Link href="/deliverables" className={styles.content_link}>詳しく見る</Link>
                 </div>
             </div>

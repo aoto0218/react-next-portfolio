@@ -1,15 +1,22 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-inline-start: 0;
+    width:1000px;
+    margin:0 auto;
 }
 
-.content {
+.list{
     background-color:white;
     color: black;
-    width: 400px;
     padding: 20px;
     border-radius: 15px;
     list-style: none;
+    margin-top:15px;
+}
+
+.name{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.date{
+    text-align: right;
 }

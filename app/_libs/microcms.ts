@@ -1,4 +1,27 @@
 import { createClient } from "microcms-js-sdk";
+import type {
+    MicroCMSQueries,
+    MicroCMSImage,
+    MicroCMSListContent,
+} from "microcms-js-sdk";
+
+export type QualificationsData={
+    id: string;
+    name: string;
+    thumbnail: MicroCMSImage;
+    detail: string;
+    date:string;
+}& MicroCMSListContent;
+
+export type DeliverablesData={
+    id: string;
+    name: string;
+    thmbnail: MicroCMSImage;
+    detail: string;
+    image: MicroCMSImage;
+    date:string;
+    file:string;
+}& MicroCMSListContent;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
     throw new Error("MICROCMS_SERVICE_DOMAIN is required");
@@ -12,3 +35,21 @@ export const client = createClient({
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     apiKey: process.env.MICROCMS_API_KEY,
 });
+
+export const getQualificationsList = async (queries?: MicroCMSQueries) => {
+    const listData = await client
+        .getList<QualificationsData>({
+            endpoint: "qualifications",
+            queries,
+        });
+    return listData;
+};
+
+export const getDeliverablesList = async (queries?: MicroCMSQueries) => {
+    const listData = await client
+        .getList<DeliverablesData>({
+            endpoint: "deliverables",
+            queries,
+        });
+    return listData;
+};
