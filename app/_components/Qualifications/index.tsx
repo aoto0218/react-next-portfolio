@@ -1,21 +1,11 @@
 import styles from "./index.module.css";
-import { getQualificationsList } from "@/app/_libs/microcms";
 
-export default async function Qualifications() {
-    const data=await getQualificationsList();
+export default function Deliverables() {
     return (
-        {data.contents.length===0?(
-            <p className={styles.empty}>メンバーが登録されていません。</p>
-        ):(
-            <ul>
-                {data.contents.map((qualifications)=>(
-                    <li key={qualifications.id} className={styles.list}>
-                        <dl>
-                            <dd className={styles.position}>{qualifications.name}</dd>
-                        </dl>
-                    </li>
-                ))}
-            </ul>
-        )}
+        <ul className={styles.container}>{/*HOME画面用テスト*/}
+            <li className={styles.content}>Python TypingGame</li>
+            <li className={styles.content}>WEB基礎 AboutMe</li>
+            <li className={styles.content}>Nuxt3 Portfolio</li>
+        </ul>
     );
 }

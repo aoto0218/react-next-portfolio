@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Qualifications from "./_components/Qualifications";
 import Deliverables from "./_components/Deliverables";
+import AgeCalculator from "./_components/AgeCalculator";
 import Link from "next/link";
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
                     <p>年齢は？</p>
                 </div>
                 <div className={styles.balloon_left}>
-                    <p>18歳です。</p>
+                    <AgeCalculator birthDate={new Date(2006, 2, 18)} />
                 </div>
                 <div className={styles.balloon_right}>
                     <p>誕生日は？</p>
