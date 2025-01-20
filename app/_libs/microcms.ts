@@ -6,7 +6,6 @@ import type {
 } from "microcms-js-sdk";
 
 export type QualificationsData={
-    id: string;
     name: string;
     thumbnail: MicroCMSImage;
     detail: string;
@@ -14,7 +13,6 @@ export type QualificationsData={
 }& MicroCMSListContent;
 
 export type DeliverablesData={
-    id: string;
     name: string;
     thmbnail: MicroCMSImage;
     detail: string;

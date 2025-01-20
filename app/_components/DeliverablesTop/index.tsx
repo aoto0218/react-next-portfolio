@@ -1,22 +1,22 @@
-import { getDeliverablesList} from "@/app/_libs/microcms";
-import { TOP_DELIVERABLES_LIMIT } from "@/app/_constants";
+import Link from "next/link";
 import styles from "./index.module.css";
+import { DeliverablesData } from "@/app/_libs/microcms";
 
-export default async function DeliverablesTop(){
-    const data=await getDeliverablesList({limit:TOP_DELIVERABLES_LIMIT});
-    return(
+type Props = {
+    deliverables: DeliverablesData[];
+};
+
+export default function DeliverablesTop({ deliverables }: Props) {
+    if (deliverables.length === 0) {
+        return <p className={styles.empty}>まだ取得した資格はありません。</p>;
+    }
+    return (
         <div>
-            {data.contents.length===0?(
-                <p className={styles.empty}>まだ作成した成果物はありません。</p>
-            ):(
-                <div className={styles.container}>
-                    {data.contents.map((deliverables)=>(
-                        <div key={deliverables.id}>
-                            <p className={styles.content}>{deliverables.name}</p>
-                        </div>
-                    ))}
+            {deliverables.map((article) => (
+                <div key={article.id} className={styles.container}>
+                    <Link href={`/deliverables/${article.id}`} className={styles.link}><p className={styles.content}>{article.name}</p></Link>
                 </div>
-            )}
+            ))}
         </div>
-    )
+    );
 }

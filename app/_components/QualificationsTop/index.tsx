@@ -1,22 +1,22 @@
-import { getQualificationsList} from "@/app/_libs/microcms";
-import { TOP_QUALIFICATIONS_LIMIT } from "@/app/_constants";
+import Link from "next/link";
 import styles from "./index.module.css";
+import { QualificationsData } from "@/app/_libs/microcms";
 
-export default async function QualificationsTop(){
-    const data=await getQualificationsList({limit:TOP_QUALIFICATIONS_LIMIT});
-    return(
+type Props = {
+    qualifications: QualificationsData[];
+};
+
+export default function QualificationsTop({ qualifications }: Props) {
+    if (qualifications.length === 0) {
+        return <p className={styles.empty}>まだ取得した資格はありません。</p>;
+    }
+    return (
         <div>
-            {data.contents.length===0?(
-                <p className={styles.empty}>まだ取得した資格はありません。</p>
-            ):(
-                <div className={styles.container}>
-                    {data.contents.map((qualifications)=>(
-                        <div key={qualifications.id}>
-                            <p className={styles.content}>{qualifications.name}</p>
-                        </div>
-                    ))}
+            {qualifications.map((article) => (
+                <div key={article.id} className={styles.container}>
+                    <Link href={`/qualifications/${article.id}`} className={styles.link}><p className={styles.content}>{article.name}</p></Link>
                 </div>
-            )}
+            ))}
         </div>
-    )
+    );
 }
