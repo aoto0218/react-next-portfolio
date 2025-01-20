@@ -14,7 +14,7 @@ export type QualificationsData={
 
 export type DeliverablesData={
     name: string;
-    thmbnail: MicroCMSImage;
+    thumbnail: MicroCMSImage;
     detail: string;
     image: MicroCMSImage;
     date:string;
@@ -58,6 +58,23 @@ export const getQualificationsDetail = async (
     ) => {
     const detailData = await client.getListDetail<QualificationsData>({
         endpoint: 'qualifications',
+        contentId,
+        queries,
+        customRequestInit:{
+            next:{
+                revalidate:queries?.draftKey===undefined?60:0,
+            },
+        },
+    });
+    return detailData;
+};
+
+export const getDeliverablesDetail = async (
+    contentId: string,
+    queries?: MicroCMSQueries
+    ) => {
+    const detailData = await client.getListDetail<DeliverablesData>({
+        endpoint: 'deliverables',
         contentId,
         queries,
         customRequestInit:{

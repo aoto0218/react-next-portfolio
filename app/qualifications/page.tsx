@@ -9,7 +9,7 @@ export default async function Page() {
     const data = await getQualificationsList({limit:QUALIFICATIONS_LIST_LIMIT});
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>取得資格</h1>
+            <h1 className={styles.title}>資格</h1>
             {data.contents.length === 0 ? (
                 <p className={styles.empty}>まだ取得した資格はありません。</p>
             ) : (

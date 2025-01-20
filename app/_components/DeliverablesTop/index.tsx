@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./index.module.css";
 import { DeliverablesData } from "@/app/_libs/microcms";
+import { TOP_DELIVERABLES_LIMIT } from "@/app/_constants";
 
 type Props = {
     deliverables: DeliverablesData[];
@@ -12,7 +13,7 @@ export default function DeliverablesTop({ deliverables }: Props) {
     }
     return (
         <div>
-            {deliverables.map((article) => (
+            {deliverables.slice(0,TOP_DELIVERABLES_LIMIT).map((article) => (
                 <div key={article.id} className={styles.container}>
                     <Link href={`/deliverables/${article.id}`} className={styles.link}><p className={styles.content}>{article.name}</p></Link>
                 </div>
