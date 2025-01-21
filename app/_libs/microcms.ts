@@ -16,7 +16,7 @@ export type DeliverablesData={
     name: string;
     thumbnail: MicroCMSImage;
     detail: string;
-    image: MicroCMSImage;
+    images: MicroCMSImage[];
     date:string;
     file:string;
 }& MicroCMSListContent;

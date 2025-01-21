@@ -8,6 +8,29 @@
     background: linear-gradient(to top, rgb(39, 39, 39), black);
 }
 
+.links{
+    display:flex;
+    gap:30px;
+    justify-content: center;
+}
+
+.link_content{
+    color:white;
+    text-align: center;
+    font-weight:bold;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.link_content:hover {
+    color: rgba(126, 126, 126);
+}
+
+.mini{
+    font-size:12px;
+    font-weight:normal;
+}
+
 .copylight{
-    padding:48px;
+    padding:10px 0 20px 48px;
 }
