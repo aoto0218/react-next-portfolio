@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import type {QualificationsData} from "@/app/_libs/microcms";
 import Date from "../Date";
@@ -10,7 +11,10 @@ type Props={
 export default function QualificationsArticle({data}:Props){
     return(
         <main className={styles.container}>
-            <h1 className={styles.name}>{data.name}</h1>
+            <div className={styles.button_container}>
+                <h1 className={styles.name}>{data.name}</h1>
+                <Link href="/qualifications" className={styles.button}>一覧に戻る</Link>
+            </div>
             {data.thumbnail&&(
                 <Image
                     src={data.thumbnail.url}
