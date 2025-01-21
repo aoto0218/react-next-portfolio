@@ -14,16 +14,16 @@ export default async function Page() {
                 <p className={styles.empty}>まだ取得した資格はありません。</p>
             ) : (
                 <ul>
-                    {data.contents.map((qualifications) => (
-                        <li key={qualifications.id} className={styles.item}>
-                            <Link href={`/qualifications/${qualifications.id}`} className={styles.list}>
-                                {qualifications.thumbnail?(
+                    {data.contents.map((article) => (
+                        <li key={article.id} className={styles.item}>
+                            <Link href={`/qualifications/${article.id}`} className={styles.list}>
+                                {article.thumbnail?(
                                     <Image
-                                        src={qualifications.thumbnail.url}
-                                        alt={qualifications.name}
+                                        src={article.thumbnail.url}
+                                        alt={article.name}
                                         className={styles.thumbnail}
-                                        width={qualifications.thumbnail.width}
-                                        height={qualifications.thumbnail.height}
+                                        width={article.thumbnail.width}
+                                        height={article.thumbnail.height}
                                     />
                                 ):(
                                     <Image
@@ -34,8 +34,8 @@ export default async function Page() {
                                         height={108}
                                     />
                                 )}
-                                <p className={styles.name}>{qualifications.name}</p>
-                                <p className={styles.date}>取得日:<Date date={qualifications.date} /></p>
+                                <p className={styles.name}>{article.name}</p>
+                                <p className={styles.date}>取得日:<Date date={article.date} /></p>
                             </Link>
                         </li>
                     ))}

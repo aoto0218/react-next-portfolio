@@ -7,9 +7,9 @@ type Props={
     data:QualificationsData;
 };
 
-export default function Article({data}:Props){
+export default function QualificationsArticle({data}:Props){
     return(
-        <main>
+        <main className={styles.container}>
             <h1 className={styles.name}>{data.name}</h1>
             {data.thumbnail&&(
                 <Image
