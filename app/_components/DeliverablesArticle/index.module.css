@@ -64,6 +64,11 @@
 
 .filelink{
     color:white;
+    transition: color 0.3s ease;
+}
+
+.filelink:hover{
+    color: rgba(126, 126, 126);
 }
 
 .date{
