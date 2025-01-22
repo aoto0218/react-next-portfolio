@@ -14,6 +14,8 @@ export default function Header() {
 
     return (
         <header className={styles.header}>
+            <div className={styles.header_container}>
+            <div>
             <Link href="/">
                 <Image
                     src="/logo.png"
@@ -24,6 +26,7 @@ export default function Header() {
                 />
             </Link>
             <p className={styles.name}>早苗 碧大</p>
+            </div>
             <button
                 className={`${styles.hamburger} ${isMenuOpen ? styles.open : ""}`}
                 onClick={toggleMenu}
@@ -31,6 +34,7 @@ export default function Header() {
             >
                 ☰
             </button>
+            </div>
             <nav className={`${styles.nav_container} ${isMenuOpen ? styles.show : ""}`}>
                 <ul className={styles.nav}>
                     <li className={styles.nav_item}>
