@@ -52,7 +52,7 @@
     width:412px;
     height:auto;
     border-radius: 15px;
-    border:1px solid b(64, 64, 64);
+    border:1px solid rgb(64, 64, 64);
 }
 
 .file{
