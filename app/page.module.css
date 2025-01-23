@@ -9,6 +9,7 @@
     align-items: center;
     gap: 30px;
     animation:fade-in-up 1s ease-out;
+    width:80%;
 }
 
 @keyframes fade-in-up {
@@ -29,8 +30,8 @@
     align-items: center;
     margin-top: -80px;
     padding-top: 30px;
-    width: 500px;
-    max-width: 90%;
+    width: 100%;
+    max-width: 500px;
     height: 400px;
     border-radius: 15px;
     background-color: rgb(32, 32, 32);
@@ -153,24 +154,19 @@
     height:auto;
 }
 
-@media screen and (max-width: 1080px) {
+@media (max-width:1080px){
     .content{
         gap:10px;
     }
-
-    .content_feeld{
-        width:300px;
-    }
 }
 
-@media screen and (max-width: 640px) {
+@media (max-width: 640px) {
     .content{
         flex-direction: column;
         gap:100px;
     }
 
     .content_feeld{
-        width:500px;
         height:100%;
     }
 

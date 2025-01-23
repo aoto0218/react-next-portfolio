@@ -1,3 +1,7 @@
+.box{
+    width:80%;
+}
+
 .container{
     margin-top:15px;
 }
@@ -9,22 +13,17 @@
 .content {
     background-color:white;
     color: black;
-    width: 400px;
+    width: 100%;
     padding: 20px;
     border-radius: 15px;
     list-style: none;
     margin-top:10px;
     transition: width 0.3s ease;
+    transition: font-size 0.3s ease;
 }
 
-@media screen and (max-width: 1080px) {
-    .content {
-        width: 250px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .content {
-        width: 400px;
+@media (max-width:1080px){
+    .content{
+        font-size:14px;
     }
 }

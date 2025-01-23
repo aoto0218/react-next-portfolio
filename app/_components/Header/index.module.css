@@ -6,10 +6,6 @@
     background-color: rgb(39, 39, 39);
 }
 
-.header_container{
-    width:70%;
-}
-
 .name {
     font-size: 18px;
     font-weight: bold;
@@ -66,10 +62,9 @@
 }
 
 .nav_container.show {
-    transform: translateY(0);
+    transform: translateY(-140px);
 }
 
-/* デスクトップ用 */
 @media (max-width: 640px) {
     .hamburger {
         display: block;
@@ -87,15 +82,39 @@
         align-items: center;
         gap: 30px;
         transition: transform 0.3s ease;
-        transform: translateX(300%);
+        transform: translateY(-430px);
+    }
+
+    .icon{
+            display:flex;
+            align-items: center;
+            gap:10px;
+        }
+
+    .logo{
+        width:50px;
+        height:auto;
+    }
+
+    .name{
+        font-size:16px;
     }
 
     .nav{
         display:block;
-        background-color:rgba(130, 130, 130, 0.5)
+        background-color:rgba(0, 0, 0, 0.9);
+        border-radius:15px;
+        padding:10px;
+        margin-bottom:-300px;
+    }
+
+    .nav_item{
+        padding:20px 0 20px 0;
+        border-top:1px solid gray;
     }
 
     .header_container{
+        width:70%;
         display:flex;
         justify-content:space-between;
     }

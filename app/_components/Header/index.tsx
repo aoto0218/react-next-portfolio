@@ -15,7 +15,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.header_container}>
-            <div>
+            <div className={styles.icon}>
             <Link href="/">
                 <Image
                     src="/logo.png"

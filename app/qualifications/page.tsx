@@ -13,9 +13,9 @@ export default async function Page() {
             {data.contents.length === 0 ? (
                 <p className={styles.empty}>まだ取得した資格はありません。</p>
             ) : (
-                <ul>
+                <div>
                     {data.contents.map((article) => (
-                        <li key={article.id} className={styles.item}>
+                        <div key={article.id} className={styles.item}>
                             <Link href={`/qualifications/${article.id}`} className={styles.list}>
                                 {article.thumbnail?(
                                     <Image
@@ -37,9 +37,9 @@ export default async function Page() {
                                 <p className={styles.name}>{article.name}</p>
                                 <p className={styles.date}>取得日:<Date date={article.date} /></p>
                             </Link>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             )}
         </div>
     );

@@ -7,7 +7,7 @@
 }
 
 .container {
-    width:1000px;
+    width:80%;
     margin:0 auto;
 }
 
@@ -24,20 +24,47 @@
     align-items: center;
     text-decoration: none;
     color:white;
+    transition:padding 0.3s ease;
 }
 
 .thumbnail{
     width:192px;
     height:108px;
     border-radius: 15px;
+    transition:width 0.3s ease;
 }
 
 .name{
     font-size: 20px;
     font-weight: bold;
     margin-left:30px;
+    transition:font-size 0.3s ease;
 }
 
 .date{
     margin-left:auto;
+}
+
+@media (max-width:1080px){
+    .name{
+        font-size:16px;
+    }
+}
+
+@media (max-width:800px){
+    .date{
+        display:none;
+    }
+}
+
+@media (max-width:640px){
+    .list{
+        padding:10px;
+    }
+
+    .thumbnail{
+        width:100px;
+        height:auto;
+        border-radius:10px;
+    }
 }

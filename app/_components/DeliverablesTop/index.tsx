@@ -12,7 +12,7 @@ export default function DeliverablesTop({ deliverables }: Props) {
         return <p className={styles.empty}>まだ取得した資格はありません。</p>;
     }
     return (
-        <div>
+        <div className={styles.box}>
             {deliverables.slice(0,TOP_DELIVERABLES_LIMIT).map((article) => (
                 <div key={article.id} className={styles.container}>
                     <Link href={`/deliverables/${article.id}`} className={styles.link}><p className={styles.content}>{article.name}</p></Link>
