@@ -6,6 +6,7 @@
 
 .content {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 30px;
     animation:fade-in-up 1s ease-out;
@@ -37,8 +38,7 @@
     background-color: rgb(32, 32, 32);
     animation: gradient-loop 5s infinite;
     text-align: center;
-    transition:box-shadow 0.3s;
-    transition: width 0.3s ease;
+    transition:box-shadow 0.3s ease;
 }
 
 .content_feeld:hover{

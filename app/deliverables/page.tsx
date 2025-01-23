@@ -13,9 +13,9 @@ export default async function deliverables() {
             {data.contents.length === 0 ? (
                 <p className={styles.empty}>まだ作成した成果物はありません。</p>
             ) : (
-                <ul>
+                <div>
                     {data.contents.map((deliverables) => (
-                        <li key={deliverables.id} className={styles.item}>
+                        <div key={deliverables.id} className={styles.item}>
                             <Link href={`/deliverables/${deliverables.id}`} className={styles.list}>
                                 {deliverables.thumbnail?(
                                     <Image
@@ -37,9 +37,9 @@ export default async function deliverables() {
                                 <p className={styles.name}>{deliverables.name}</p>
                                 <p className={styles.date}>作成日:<Date date={deliverables.date} /></p>
                             </Link>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             )}
         </div>
     );

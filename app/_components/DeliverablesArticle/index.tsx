@@ -3,6 +3,7 @@ import Image from "next/image";
 import type {DeliverablesData} from "@/app/_libs/microcms";
 import Date from "../Date";
 import styles from "./index.module.css";
+import {Fragment} from "react";
 
 type Props = {
     data: DeliverablesData;
@@ -24,7 +25,14 @@ export default function DeliverablesArticle({ data }: Props) {
                 height={data.thumbnail.height}
             />
             )}
-            {data.detail && <p className={styles.detail}>{data.detail}</p>}
+            {data.detail && <p className={styles.detail}>
+                {data.detail.split("\n").map((line,index)=>(
+                    <Fragment key={index}>
+                        {line}
+                        <br />
+                    </Fragment>
+                ))}
+            </p>}
             {data.images && data.images.length > 0 && (
                 <>
                     <h2 className={styles.imagesTitle}>画像</h2>
