@@ -13,12 +13,12 @@ export default function Header() {
     };
 
     useEffect(() => {
-        const handleOutsideClick = (event) => {
+        const handleOutsideClick = (event:MouseEvent) => {
             const menu = document.querySelector(`.${styles.nav_container}`);
             const hamburger = document.querySelector(`.${styles.hamburger}`);
             if (menu && hamburger && 
-                !menu.contains(event.target) && 
-                !hamburger.contains(event.target)) {
+                !menu.contains(event.target as Node) && 
+                !hamburger.contains(event.target as Node)) {
                 setIsMenuOpen(false);
             }
         };

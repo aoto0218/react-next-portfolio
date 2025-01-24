@@ -51,6 +51,7 @@
 
 .imagesTitle{
     margin-left:80px;
+    transition:margin 0.3s ease;
 }
 
 .imageContainer{
@@ -59,6 +60,7 @@
     display:grid;
     grid-template-columns:30% 30% 30%;
     gap:15px;
+    transition:margin 0.3s ease;
 }
 
 .image{
@@ -125,6 +127,14 @@
     .detail{
         width:70%;
         margin:50px 0 50px 40px;
+    }
+
+    .imagesTitle{
+        margin-left:50px;
+    }
+
+    .imageContainer{
+        margin-left:50px;
     }
 
     .imageContainer{
