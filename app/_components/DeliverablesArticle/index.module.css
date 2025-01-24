@@ -1,5 +1,6 @@
 .container{
-    width:1000px;
+    width:80%;
+    max-width:1000px;
     margin:0 auto;
     background-color:rgb(32, 32, 32);
     border-radius:15px;
@@ -13,6 +14,10 @@
     padding-top:80px;
 }
 
+.name{
+    transition:font-size 0.3s ease;
+}
+
 .button{
     padding:15px 20px;
     border-radius:10px;
@@ -22,19 +27,26 @@
     transition:box-shadow 0.3s;
 }
 
+.mobile_name{
+    display:none;
+}
+
 .button:hover{
     box-shadow:0px 0px 5px rgba(255, 255, 255, 0.5);
 }
 
 .thumbnail{
-    width:640px;
-    height:360px;
+    width:80%;
+    max-width:640px;
+    height:auto;
     margin:0 auto;
     border-radius: 15px;
 }
 
 .detail{
     margin:50px 0 50px 80px;
+    width:80%;
+    transition:margin 0.3s ease;
 }
 
 .imagesTitle{
@@ -43,16 +55,21 @@
 
 .imageContainer{
     margin-left:80px;
+    width:80%;
     display:grid;
-    grid-template-columns:412px 412px;
-    gap:16px;
+    grid-template-columns:30% 30% 30%;
+    gap:15px;
 }
 
 .image{
-    width:412px;
     height:auto;
     border-radius: 15px;
     border:1px solid rgb(64, 64, 64);
+    transition:box-shadow 0.3s ease;
+}
+
+.image:hover{
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .file{
@@ -75,4 +92,42 @@
     margin: 30px 80px 0 0;
     padding-bottom:80px;
     text-align: right;
+}
+
+@media (max-width:1080px){
+    .name{
+        font-size:25px;
+    }
+}
+
+@media (max-width:640px){
+    .button_container{
+        display:block;
+        margin:0 0 50px 0;
+        padding-top:50px;
+    }
+    .name{
+        display:none;
+    }
+
+    .button{
+        font-size:14px;
+        margin-right:40px;
+    }
+
+    .mobile_name{
+        display:block;
+        text-align: center;
+        font-size:25px;
+        margin:30px 0 -50px 0;
+    }
+
+    .detail{
+        width:70%;
+        margin:50px 0 50px 40px;
+    }
+
+    .imageContainer{
+        grid-template-columns:80%;
+    }
 }

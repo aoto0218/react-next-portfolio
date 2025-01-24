@@ -15,6 +15,7 @@ export default function DeliverablesArticle({ data }: Props) {
             <div className={styles.button_container}>
                 <h1 className={styles.name}>{data.name}</h1>
                 <Link href="/deliverables" className={styles.button}>一覧に戻る</Link>
+                <h1 className={styles.mobile_name}>{data.name}</h1>
             </div>
             {data.thumbnail && (
             <Image
@@ -38,14 +39,16 @@ export default function DeliverablesArticle({ data }: Props) {
                     <h2 className={styles.imagesTitle}>画像</h2>
                     <div className={styles.imageContainer}>
                     {data.images.map((image, index) => (
-                        <Image
-                            key={index}
-                            src={image.url}
-                            alt={`Image ${index + 1}`}
-                            className={styles.image}
-                            width={image.width}
-                            height={image.height}
-                        />
+                        <a href={image.url} target="_blank" key={index}>
+                            <Image
+                                key={index}
+                                src={image.url}
+                                alt={`Image ${index + 1}`}
+                                className={styles.image}
+                                width={image.width}
+                                height={image.height}
+                            />
+                        </a>
                     ))}
                     </div>
                 </>
