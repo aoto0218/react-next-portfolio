@@ -61,10 +61,6 @@
     justify-content: center;
 }
 
-.nav_container.show {
-    transform: translateY(-140px);
-}
-
 @media (max-width: 640px) {
     .hamburger {
         display: flex;
@@ -77,6 +73,10 @@
         border: none;
         cursor: pointer;
         padding: 0;
+    }
+
+    .nav_container.show {
+        transform: translateY(-140px);
     }
 
     .hamburger_line {
