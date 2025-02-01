@@ -9,6 +9,19 @@
 .container {
     width:80%;
     margin:0 auto;
+    animation:fade-in-up 1s ease-out;
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .item{

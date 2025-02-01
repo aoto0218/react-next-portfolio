@@ -2,15 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
     animation:fade-in-up 1s ease-out;
-    width:80%;
 }
 
 @keyframes fade-in-up {
@@ -23,6 +15,14 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width:80%;
 }
 
 .content_feeld {
@@ -82,78 +82,6 @@
     font-family: Georgia, serif;
 }
 
-.chat {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    font-family: "Roboto", sans-serif;
-    transition: width 0.3s ease;
-}
-
-.balloon_left {
-    position: relative;
-    display: inline-block;
-    width: fit-content;
-    margin: 30px auto 0 15px;
-    padding: 8px 22px;
-    max-width: 100%;
-    font-size: 30px;
-    background: #707070;
-    box-sizing: border-box;
-    border-radius: 35px;
-    transition: font-size 0.3s ease;
-}
-
-.balloon_left:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -17px;
-    margin-top: -10px;
-    border: 7px solid transparent;
-    border-right: 12px solid #707070;
-    z-index: 2;
-}
-
-.balloon_left:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -30px;
-    margin-top: -14px;
-    border: 10px solid transparent;
-    z-index: 1;
-}
-
-.balloon_right {
-    position: relative;
-    display: inline-block;
-    width: fit-content;
-    margin: 30px 15px 0 auto;
-    padding: 8px 22px;
-    max-width: 100%;
-    color: black;
-    font-size: 30px;
-    background: #00ff00;
-    border-radius: 35px;
-    transition: font-size 0.3s ease;
-}
-
-.balloon_right:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 97%;
-    margin-top: -10px;
-    border: 8px solid transparent;
-    border-left: 15px solid #00ff00;
-}
-
-.shiga {
-    margin-top: 30px;
-    height:auto;
-}
-
 @media (max-width:1080px){
     .content{
         gap:10px;
@@ -172,22 +100,5 @@
 
     .content_link{
         margin-top:20px;
-    }
-
-    .chat{
-        width:90%;
-    }
-
-    .balloon_left{
-        font-size:20px;
-    }
-
-    .balloon_right{
-        font-size:20px;
-    }
-
-    .shiga{
-        width:90%;
-        height:auto;
     }
 }
