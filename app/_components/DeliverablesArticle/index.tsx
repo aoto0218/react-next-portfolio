@@ -96,7 +96,6 @@ export default function DeliverablesArticle({ data }: Props) {
                 </div>
             )}
             <p className={styles.date}>取得日: <Date date={data.date} /></p>
-
             <Modal
                 isOpen={isOpen}
                 onRequestClose={closeModal}
@@ -106,7 +105,7 @@ export default function DeliverablesArticle({ data }: Props) {
             >
                 <div {...handlers} className={styles.modalContent}>
                     <button className={styles.closeButton} onClick={closeModal}>×</button>
-                    {data.images && (
+                    {data.images && data.images.length > 0 && (
                         <>
                             <button className={styles.prevButton} onClick={prevImage}>‹</button>
                             <Image
