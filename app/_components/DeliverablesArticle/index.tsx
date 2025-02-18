@@ -95,7 +95,7 @@ export default function DeliverablesArticle({ data }: Props) {
                     </a>
                 </div>
             )}
-            <p className={styles.date}>取得日: <Date date={data.date} /></p>
+            <p className={styles.date}>作成日: <Date date={data.date} /></p>
             <Modal
                 isOpen={isOpen}
                 onRequestClose={closeModal}
